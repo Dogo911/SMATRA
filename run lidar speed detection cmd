@@ -1,0 +1,8 @@
+lidar start via ros 
+Zuvor starup_2.0.py , export ID 5 echo /scan 
+
+
+cd ~/ros2_ws 
+(colcon build)
+ros2 run lidar_speed truck_speed_monitor_modified 
+

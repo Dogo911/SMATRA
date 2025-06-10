@@ -1,0 +1,31 @@
+python startup_5.1.py 
+
+NEW WINDOW
+source ~/ros2_ws/install/setup.bash
+export ROS_DOMAIN_ID=5
+ros2 topic echo /truck_state
+
+NEW WINDOW
+source /opt/ros/humble/setup.bash 
+export ROS_DOMAIN_ID=5
+ros2 topic echo /scan
+
+
+#Aufzeichnen# 
+NEW WINDOW
+source ~/ros2_ws/install/setup.bash
+export ROS_DOMAIN_ID=5
+ros2 bag record -a
+#beenden mit STRG+C
+#abspielen mit ros2 bag record -a
+-> Ausgabe in selben fenstern wie live stream, daher zuvor WLAN aus LiDAR disconnect 
+-> rosbag in Home verzeichnis gespeichert: hier sowohl LiDAR als auch truck daten gespeichert 
+-> Python skript zur aufbereitung der rosbag 
+
+
+
+
+
+cd ~/bags/truck_speed_test
+ros2 bag record /truck_state
+

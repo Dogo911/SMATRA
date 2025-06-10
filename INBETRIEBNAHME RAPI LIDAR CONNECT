@@ -1,0 +1,24 @@
+RAPI INBETRIEBNAHME: 
+T1: roscore
+T2: python3 rest_listener.py 
+T3: sudo python3 ~/catkin_ws/src/test/scripts/travio.py
+
+LIDAR INBETRIEBNAHME: (connect via USB-C) 
+T4: python startup_5.1.py  oder python startup_5.2.py 
+T5: source /opt/ros/humble/setup.bash 
+    export ROS_DOMAIN_ID=5
+    ros2 topic echo /scan
+T6: source ~/ros2_ws/install/setup.bash
+    cd ~/ros2_ws 
+    colcon build
+    source install/setup.bash
+    export ROS_DOMAIN_ID=5
+    ros2 run lidar_speed truck_speed_monitor_modified_2
+
+Problem: verbindung bricht teilweise nach Zeile 16 ab
+
+
+
+
+curl -X POST http://192.168.0.60:5000/update -H "Content-Type: application/json" -d '{"velocity": 132, "speed": 135, "icon": "car"}'
+

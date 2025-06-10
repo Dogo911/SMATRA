@@ -1,0 +1,14 @@
+Terminal 1:
+    python startup_5.1.py
+
+Terminal 2:
+    source /opt/ros/humble/setup.bash 
+    export ROS_DOMAIN_ID=5
+    ros2 topic echo /scan
+
+Terminal 3:
+    cd ~/ros2_ws 
+    colcon build
+    source install/setup.bash
+    export ROS_DOMAIN_ID=5
+    ros2 run lidar_speed truck_speed_monitor_modified_2

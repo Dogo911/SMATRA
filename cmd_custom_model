@@ -1,0 +1,2 @@
+detectnet --model=models/trav_small/ssd-mobilenet.onnx --labels=models/trav_small/labels.txt --input-blob=input_0 --output-cvg=scores --output-bbox=boxes csi://0
+

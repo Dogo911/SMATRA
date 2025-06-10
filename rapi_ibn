@@ -1,0 +1,17 @@
+Terminal 1: 
+    ssh ubuntu@192.168.0.60
+    Passwort Eingabe: traverse1234
+    cd /catkin_ws/
+    source ./devel/setup.bash
+    roscore
+
+
+Terminal 2:
+    ssh ubuntu@192.168.0.60
+    Passwort Eingabe: traverse1234
+    python3 rest_listener.py 
+
+Terminal 3: 
+    ssh ubuntu@192.168.0.60
+    Passwort Eingabe: traverse1234
+    sudo python3 ~/catkin_ws/src/test/scripts/travio.py

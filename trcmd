@@ -1,0 +1,12 @@
+train befehle
+
+mkdir traverse
+
+python3 open_images_downloader.py --max-images=35000 --class-names "Car,Truck,Bus,Motorcycle,Van,Bicycle,Person" --data=data/traverse
+
+python3 train_ssd.py --data=data/traverse_small/ --model-dir=models/trav_small --batch-size=4 --epochs=30
+
+
+
+traverse_small = 7.000 bilder 
+traverse_big = 35.000 bilder
